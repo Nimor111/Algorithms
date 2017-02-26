@@ -3,7 +3,52 @@
 
 int compare(char arr1[50], char arr2[50])
 {
-    return strcmp(arr1, arr2) <= 0;
+    int n1 = strlen(arr1);
+    int n2 = strlen(arr2);
+    int len;
+    if ( n1 < n2 ) len = n1;
+    else len = n2;
+    for (int i = 0; i<len; i++)
+    {
+        if (arr1[i]<arr2[i])
+        {
+            return 1;
+        }
+        if (arr2[i]<arr1[i])
+        {
+            return 0;
+        }
+    }
+    if (n1<n2)
+    {
+        for (int i = n1; i<n2; i++)
+        {
+            if (arr2[i]<arr1[n1 - 1])
+            {
+                return 0;
+            }
+            if (arr2[i]>arr1[n1 - 1])
+            {
+                return 1;
+            }
+        }
+    }
+    else if (n1>n2)
+    {
+        for (int i = n2; i<n1; i++)
+        {
+            if (arr2[n2 - 1]<arr1[i])
+            {
+                return 0;
+            }
+            if (arr2[n2 - 1]>arr1[i])
+            {
+                return 1;
+            }
+        }
+    }
+    return 0;
+
 }
 
 // merge two subarrays of array
@@ -29,7 +74,7 @@ void merge(char arr[][50], int left, int right, int middle,
 
     while ( i < n1 && j < n2 )
     {
-        if ( f(L[i], R[j]) )
+        if ( f(L[i], R[j]) == 1 )
         {
             strcpy(arr[k], L[i]);
             i++;
@@ -75,18 +120,28 @@ int main(int argc, char const ** argv)
     for ( int i = 0; i < N; i++ )
         scanf("%s", &arr[i][50]);
     mergeSort(arr, 0, N, compare);
-    char arr1[50000], arr2[50000];
-    for ( int i = 0; i < N + 1; i++ )
+    for (int i = 0; i < N + 1; i++)
     {
-        strcat(arr1, arr[i]);
+        printf("%s", arr[i]);
     }
-    for ( int i = N; i >= 0; i-- )
-    {
-        strcat(arr2, arr[i]);
-    }
+    printf("\n");
 
-    if ( strcmp(arr1, arr2) >= 0 ) printf("%s", arr2);
-    else printf("%s", arr1);
+    /* char arr1[50000], arr2[50000]; */
+    /* for ( int i = 0; i < N + 1; i++ ) */
+    /* { */
+    /*     strcat(arr1, arr[i]); */
+    /* } */
+    /* for ( int i = N; i >= 0; i-- ) */
+    /* { */
+    /*     strcat(arr2, arr[i]); */
+    /* } */
+
+    char arr1[] = "d";
+    char arr2[] = "ddaa";
+    /* if ( strcmp(arr1, arr2) >= 0 ) printf("%s", arr2); */
+    /* else printf("%s", arr1); */
+    printf("%d\n", compare(arr1, arr2));
+    printf("%d\n", (int)strcmp(arr1, arr2));
 
     return 0;
 }
