@@ -117,13 +117,14 @@ int main(int argc, char const ** argv)
 {
     int N; scanf("%d", &N);
     char arr[50000][50];
-    for ( int i = 0; i < N; i++ )
-        scanf("%s", &arr[i][50]);
+    int i;
+    for ( i = 0; i < N; i++ ) {
+        scanf("%50s", arr[i]);
+    }
     mergeSort(arr, 0, N, compare);
-    for (int i = 0; i < N + 1; i++)
+    for (int i = 1; i < N + 1; i++)
     {
         printf("%s", arr[i]);
     }
-
     return 0;
 }
