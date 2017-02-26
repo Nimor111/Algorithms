@@ -124,24 +124,6 @@ int main(int argc, char const ** argv)
     {
         printf("%s", arr[i]);
     }
-    printf("\n");
-
-    /* char arr1[50000], arr2[50000]; */
-    /* for ( int i = 0; i < N + 1; i++ ) */
-    /* { */
-    /*     strcat(arr1, arr[i]); */
-    /* } */
-    /* for ( int i = N; i >= 0; i-- ) */
-    /* { */
-    /*     strcat(arr2, arr[i]); */
-    /* } */
-
-    char arr1[] = "d";
-    char arr2[] = "ddaa";
-    /* if ( strcmp(arr1, arr2) >= 0 ) printf("%s", arr2); */
-    /* else printf("%s", arr1); */
-    printf("%d\n", compare(arr1, arr2));
-    printf("%d\n", (int)strcmp(arr1, arr2));
 
     return 0;
 }
