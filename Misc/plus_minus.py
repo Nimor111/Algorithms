@@ -1,4 +1,7 @@
 def plus_minus(xs):
+    """
+    Return the fraction of positive, negative, and zero elements in a list
+    """
     pos = neg = zero = 0
     for element in xs:
         if element == 0:

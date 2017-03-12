@@ -1,4 +1,8 @@
+
 def primary_diagonal(matrix):
+    """
+    Return the sum of elements in the primary diagonal of a matrix
+    """
     s = 0
     for i in range(len(matrix)):
         for j in range(len(matrix)):
@@ -9,6 +13,9 @@ def primary_diagonal(matrix):
 
 
 def secondary_diagonal(matrix):
+    """
+    Return the sum of elements in the secondary diagonal of a matrix
+    """
     s = 0
     for i in range(len(matrix)):
         for j in range(len(matrix), -1, -1):
@@ -19,6 +26,9 @@ def secondary_diagonal(matrix):
 
 
 def sum_of_diagonals(matrix):
+    """
+    Return absolute sum of two diagonals of a matrix
+    """
     return abs(primary_diagonal(matrix) - secondary_diagonal(matrix))
 
 

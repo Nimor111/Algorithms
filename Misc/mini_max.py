@@ -1,7 +1,11 @@
+
 from itertools import combinations
 
 
 def mini_max(xs):
+    """
+    Return max and min sum of 4 elements in a 5-element list
+    """
     combs = combinations(xs, 4)
     sums = [sum(x) for x in list(combs)]
     return [

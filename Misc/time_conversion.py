@@ -2,6 +2,9 @@ import re
 
 
 def time_conversion(time):
+    """
+    Return converted 12-hour time format to 24-hour time format
+    """
     times = {
         '01': '13',
         '02': '14',

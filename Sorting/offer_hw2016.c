@@ -1,3 +1,9 @@
+/**
+ * Return minimum by comparison concatenation of strings,
+ * comparison is kinda funky
+ */
+
+
 #include <stdio.h>
 #include <string.h>
 
