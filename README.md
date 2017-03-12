@@ -1,2 +1,2 @@
 # Algorithms
-Some algorithm problems
+Some algorithm problems, most of them from HackerRank
