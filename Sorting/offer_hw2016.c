@@ -132,5 +132,6 @@ int main(int argc, char const ** argv)
     {
         printf("%s", arr[i]);
     }
+    printf("\n");
     return 0;
 }
