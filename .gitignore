@@ -1,2 +1,5 @@
 # Ignore c executables
 a.out
+
+# ignore pycache
+__pycache__
