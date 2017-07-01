@@ -2,7 +2,8 @@
 #include <math.h>
 
 /**
- * Helper function for binaryRoot * @params: `x`, `start`, `end`
+ * Helper function for binaryRoot
+ * @params: `x`, `start`, `end`
  * @return: square root of `x`
  * */
 
