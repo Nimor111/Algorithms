@@ -1,6 +1,4 @@
-#include <algorithm>
 #include <iostream>
-#include <stdio.h>
 #include <string>
 
 class Person {
@@ -77,12 +75,11 @@ int main(int argc, char* argv[])
     Person p3(15, "Peter");
 
     Person* p[] = { &p1, &p2, &p3 };
-    for (int i = 0; i < 3; i++) {
-        std::cout << *p[i];
-    }
 
-    Person res = quick_select<Person>(p, 0, 0, 2);
-    std::cout << res;
+    int k;
+    std::cin >> k;
+    Person res = quick_select<Person>(p, k - 1, 0, 2);
+    std::cout << "The " << k << " smallest element is: " << res;
 
     return 0;
 }
