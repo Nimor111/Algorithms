@@ -18,9 +18,7 @@ int partition(T* arr, int low, int high)
 
     for (j = low; j < high; j++) {
         if (arr[j] <= pivot) {
-            printf("SWAPPING\n");
             swap(&arr[++i], &arr[j]);
-            printf("SWAPPED\n");
         }
     }
     swap(&arr[i + 1], &arr[high]);
