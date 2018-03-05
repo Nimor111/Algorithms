@@ -1,6 +1,4 @@
-#define CATCH_CONFIG_MAIN
 #include "catch.hpp"
-
 #include "bst.cpp"
 
 TEST_CASE("it creates a bst", "[bst]")
@@ -61,5 +59,9 @@ TEST_CASE("it creates a bst", "[bst]")
         REQUIRE(bst.rank(4) == 0);
         REQUIRE(bst.rank(5) == 1);
         REQUIRE(bst.rank(6) == 2);
+
+        bst.remove(5);
+
+        REQUIRE(bst.rank(6) == 1);
     }
 }

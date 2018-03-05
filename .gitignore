@@ -1,6 +1,10 @@
 # Ignore c executables
 a.out
 main
+tests
+
+# C and C++ object files
+*.o
 
 # ignore pycache
 __pycache__
