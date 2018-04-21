@@ -5,7 +5,7 @@ int max(int a, int b)
     return a >= b ? a : b;
 }
 
-int knapsack(int* weights, int* values, int n, int W)
+int knapsack(int const* weights, int* values, int n, int W)
 {
     int table[n + 1][W + 1];
     for (int j = 0; j <= W; ++j) {

@@ -1,7 +1,7 @@
 #include <stdbool.h>
 #include <stdio.h>
 
-bool subset_sum(int* arr, int n, int sum)
+bool subset_sum(int const* arr, int n, int sum)
 {
     // table[i][j] - subset arr[0..i-1] with sum j
     bool table[n + 1][sum + 1];
@@ -22,7 +22,7 @@ bool subset_sum(int* arr, int n, int sum)
     return table[n][sum];
 }
 
-int main(int argc, char* argv[])
+int main()
 {
     int arr[] = { 1, 2, 3, 4, 5, 6 };
     printf("%d\n", subset_sum(arr, 6, 1));

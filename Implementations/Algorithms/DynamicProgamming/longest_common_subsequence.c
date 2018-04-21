@@ -28,7 +28,7 @@ int longest_common_subsequence_len(char const* str1, char const* str2)
     return table[m][n];
 }
 
-int main(int argc, char* argv[])
+int main()
 {
     char const * str1 = "IVANKATA";
     char const * str2 = "JOIVAHJNKATA";

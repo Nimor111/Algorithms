@@ -3,7 +3,7 @@
 
 // Dynamic programming solution to find the length of the longest increasing subsequence of an array
 // O(n^2)
-int len_longest_inc_subseq(int* arr, int n)
+int len_longest_inc_subseq(int const* arr, int n)
 {
     int* lis = (int*)malloc(sizeof(int) * n);
 
@@ -33,7 +33,7 @@ int len_longest_inc_subseq(int* arr, int n)
     return max;
 }
 
-int main(int argc, char* argv[])
+int main()
 {
     int arr[] = { 2, 1, 3, 5, 0, 6, -1, -18, 9 };
     printf("%d\n", len_longest_inc_subseq(arr, 9));

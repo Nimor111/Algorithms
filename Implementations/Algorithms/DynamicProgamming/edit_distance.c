@@ -41,7 +41,7 @@ int edit_distance(char const* str1, char const* str2, int n1, int n2)
     return table[n1][n2];
 }
 
-int main(int argc, char* argv[])
+int main()
 {
     char const* str1 = "string123";
     char const* str2 = "String132456";
