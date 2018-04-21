@@ -1,8 +1,12 @@
 OBJ = main.o bst.o
+TEST_OBJ = bst_test.o bst_test_main.o
 CC = g++
 CFLAGS = -g -Wall -I.
 
-all : compile clean
+all : compile test clean
+
+test: bst_test.o bst_test_main.o
+	$(CC) $(TEST_OBJ) $(CFLAGS) -o tests
 
 compile: $(OBJ)
 	$(CC) $(OBJ) $(CFLAGS) -o main
@@ -17,4 +21,4 @@ bst.o : bst.cpp
 .PHONY: clean
 
 clean : 
-	rm -f $(OBJ)
+	rm -f $(OBJ) $(TEST_OBJ)
